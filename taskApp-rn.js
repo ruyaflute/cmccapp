@@ -1,11 +1,12 @@
 import React from 'react';
 import {View, Button, Text, ScrollView, StyleSheet, Switch} from 'react-native'
-import {Constants} from 'expo'
+import Constants from 'expo-constants'
+
 
 let id = 0
 
 const styles = StyleSheet.create({
-  todoContainer: {
+  taskContainer: {
     flexDirection: 'row',
     alignItems: 'center',
   },
@@ -17,11 +18,11 @@ const styles = StyleSheet.create({
   }
 })
 
-const Todo = props => (
-  <View style={styles.todoContainer}>
-    <Switch value={props.todo.checked} onValueChange={props.onToggle} />
+const Task = props => (
+  <View style={styles.taskContainer}>
+    <Switch value={props.task.checked} onValueChange={props.onToggle} />
     <Button onPress={props.onDelete} title="delete" />
-    <Text>{props.todo.text}</Text>
+    <Text>{props.task.text}</Text>
   </View>
 )
 
@@ -29,35 +30,35 @@ export default class App extends React.Component {
   constructor() {
     super()
     this.state = {
-      todos: [],
+      tasks: [],
     }
   }
 
-  addTodo() {
+  addTask() {
     id++
-    const text = `TODO number ${id}`
+    const text = `TASK number ${id}`
     this.setState({
-      todos: [
-        ...this.state.todos,
+      tasks: [
+        ...this.state.tasks,
         {id: id, text: text, checked: false},
       ], 
     })
   }
 
-  removeTodo(id) {
+  removeTask(id) {
     this.setState({
-      todos: this.state.todos.filter(todo => todo.id !== id)
+      tasks: this.state.tasks.filter(task => task.id !== id)
     })
   }
 
-  toggleTodo(id) {
+  toggleTask(id) {
     this.setState({
-      todos: this.state.todos.map(todo => {
-        if (todo.id !== id) return todo
+      tasks: this.state.tasks.map(task => {
+        if (task.id !== id) return task
         return {
-          id: todo.id,
-          text: todo.text,
-          checked: !todo.checked,
+          id: task.id,
+          text: task.text,
+          checked: !task.checked,
         }
       })
     })
@@ -66,15 +67,15 @@ export default class App extends React.Component {
   render() {
     return (
       <View style={[styles.appContainer, styles.fill]}>
-        <Text>Todo count: {this.state.todos.length}</Text>
-        <Text>Unchecked todo count: {this.state.todos.filter(todo => !todo.checked).length}</Text>
-        <Button onPress={() => this.addTodo()} title="Add TODO" />
+        <Text>Task count: {this.state.tasks.length}</Text>
+        <Text>Unchecked task count: {this.state.tasks.filter(task => !task.checked).length}</Text>
+        <Button onPress={() => this.addTask()} title="Add TASK" />
         <ScrollView style={styles.fill}>
-          {this.state.todos.map(todo => (
-            <Todo
-              onToggle={() => this.toggleTodo(todo.id)}
-              onDelete={() => this.removeTodo(todo.id)}
-              todo={todo}
+          {this.state.tasks.map(task => (
+            <Task
+              onToggle={() => this.toggleTask(task.id)}
+              onDelete={() => this.removeTask(task.id)}
+              task={task}
             />
           ))}
         </ScrollView>
@@ -82,4 +83,3 @@ export default class App extends React.Component {
     )
   }
 }
-
