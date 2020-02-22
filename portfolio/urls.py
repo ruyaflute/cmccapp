@@ -15,9 +15,9 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-import cmccDemo.views
+import cmccDemos.views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url('', cmccDemo.views.cmccDemo, name ='demo'),
+    url('', cmccDemos.views.homepage, name ='home'),
 ]
