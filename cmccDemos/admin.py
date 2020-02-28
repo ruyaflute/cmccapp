@@ -1,4 +1,4 @@
 from django.contrib import admin
-from .models import cmccDemo
+from .models import CmccDemo
 # Register your models here.
-admin.site.register(cmccDemo)
+admin.site.register(CmccDemo)
