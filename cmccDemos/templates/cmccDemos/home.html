@@ -79,7 +79,9 @@
       <p class="lead">{{ cmccDemo.summary }}</p>
     </div>
     <div class="bg-light shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
-    	<img src="{{ cmccDemo.image.url }}">
+    	<img src="{{ cmccDemo.image.url }}" alt="my image">
+      <p><a href="#" class="text-light bg-dark"></a></p>
+      <p><a href="#" class="text-dark">{{ cmccDemo.new_field }}</a></p>
     </div>
   </div>
 {% endfor %}
