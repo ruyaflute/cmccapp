@@ -1,3 +1,5 @@
+// https://snack.expo.io/@nancyruya/5567fd
+
 import React from 'react';
 import {View, Button, Text, ScrollView, StyleSheet, Switch} from 'react-native'
 import Constants from 'expo-constants'
