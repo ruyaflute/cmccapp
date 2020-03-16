@@ -1,4 +1,6 @@
-### Django
+# CCMP App and Demo
+
+### Demo in Django
 ###### Ideally: use Django to build a website to demostrate how the case management and care coordination app is going to work - I still have no idea what the app is going to look like.
 - Phone number should be able to connect with cell phone and directly call patient from the app, video calling is even better. Providers can access it when it is necessary for patient.
 
@@ -48,3 +50,8 @@
 
 - iOS Simulator:
 - Installed Xcode
+- expo init my-new-project; cd my-new-project; expo start
+
+### Git
+- git init; git remote add origin https://github.com/... ; git remote -v; git add . ; git status; git commit -m ""; git push origin master; (git pull origin master --rebase)
+- git init; git add .; git commit -m ""; git push
