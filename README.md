@@ -1,4 +1,4 @@
-# CCMP App and Demo
+# CMCC App and Demo
 
 ### Demo in Django
 ###### Ideally: use Django to build a website to demostrate how the case management and care coordination app is going to work - I still have no idea what the app is going to look like.
