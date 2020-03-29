@@ -27,6 +27,14 @@
 - Event annnouncement for group meetup, etc
 
 ###### Reality: image uploaded to postgreSQL but not shown in html page; page url-id not connected. -- not important yet
+#### For Case Manager
+- You can directly reach to patient via phone call or video call through app. You can locate patient's address. Convenient assessment tools to identify patient's acuity level (medical and mental health assessment). Creating care plan, and tracking tool. Appointment and ER follow up (entered by patient). Provider tree and phone/video call. Assignment tool for other Case Manager. Announce group events.
+#### For Patient
+- Input for demographic information and medical background, Provider tree, appointment, ER visit, interpretation tool (or call), complaints/issues, Entitlement resources, group event, reminder for patient.....
+#### For Providers
+- Providers and care worker tree and connect, Recent medical/mental path report, ER discharge summary. Care plan/task reminder/assign to Case Manager. Able to view patient's demo, acuity level, entitlement issues.
+#### Where my project idea came from
+- blahhhh
 
 
 ### React Native
