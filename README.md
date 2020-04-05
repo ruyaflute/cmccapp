@@ -63,3 +63,4 @@
 ### Git
 - git init; git remote add origin https://github.com/... ; git remote -v; git add . ; git status; git commit -m ""; git push origin master; (git pull origin master --rebase)
 - git init; git add .; git commit -m ""; git push
+- remove all local changes, including files that are untracked by git, from working copy: git stash push --include-untracked
