@@ -7,7 +7,7 @@ class CmccDemo(models.Model):
 	#summary
 	summary = models.CharField(max_length=200)
 	#description
-	new_field = models.CharField(max_length=140, default='SOME STRING')
+	new_field = models.CharField(max_length=5000, default='SOME STRING')
 
 
 	def __str__(self):
