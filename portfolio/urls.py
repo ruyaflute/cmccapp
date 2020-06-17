@@ -23,6 +23,7 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url('', cmccDemos.views.homepage, name ='home'),
     url('cmccDemos/<int:cmccDemo_id>', cmccDemos.views.detail, name='detail'),
+    url('blog/', cmccDemos.views.blog, name='blog'),
 ]
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
