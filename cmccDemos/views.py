@@ -7,5 +7,4 @@ def homepage(request):
 	return render(request, 'cmccDemos/home.html', {'cmccDemos': cmccDemos})
 
 def blog(request):
-	cmccDemo_detail = get_object_or_404(CmccDemo, pk=cmccDemo_id)
 	return render(request, 'cmccDemos/blog.html', {})
