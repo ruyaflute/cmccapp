@@ -7,4 +7,5 @@ def homepage(request):
 	return render(request, 'cmccDemos/home.html', {'cmccDemos': cmccDemos})
 
 def blog(request):
-	return render(request, 'cmccDemos/blog.html', {})
+	cmccDemos = CmccDemo.objects
+	return render(request, 'cmccDemos/blog.html', {'cmccDemos': cmccDemos})
