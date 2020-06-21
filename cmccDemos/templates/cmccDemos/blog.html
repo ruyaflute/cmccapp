@@ -55,9 +55,9 @@
     
         <a class="py-2 d-none d-md-inline-block display-4 font-weight-bold">CMCC</a>
         <a class="py-2 d-none d-md-inline-block" href="{% url 'home' %}">About</a>
-        <a class="py-2 d-none d-md-inline-block" href="">Products</a>
-        <a class="py-2 d-none d-md-inline-block" href="">Blog</a>
-        <a class="py-2 d-none d-md-inline-block" href="">Contact</a>
+        <a class="py-2 d-none d-md-inline-block" href="{% url 'products' %}">Products</a>
+        <a class="py-2 d-none d-md-inline-block" href="{% url 'blog' %}">Blog</a>
+        <a class="py-2 d-none d-md-inline-block" href="{% url 'contact' %}">Contact</a>
       </div>
     </nav>
 
@@ -65,13 +65,15 @@
       <div class="d-md md-equal w-100 my-md-3 pl-md-3">
         {% for cmccDemo in cmccDemos.all %}
       
-        <div class="bg-dark mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
+        <div class="mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-left text-black overflow-hidden">
           <div class="my-3 py-3">
             <p class="lead">{{ cmccDemo.summary }}</p>
           </div>
-            <img src="{{ cmccDemo.image.url }}" style="height:50%" alt="my image">
+          
+            <img src="{{ cmccDemo.image.url }}" style="height: 300px; border-radius: 21px 21px 0 0;" alt="my image">
             <p><a href="#" class="text-light bg-dark"></a></p>
             <p><a href="#" class="text-dark">{{ cmccDemo.new_field }}</a></p>
+          
         </div>
       {% endfor %}
     </div>

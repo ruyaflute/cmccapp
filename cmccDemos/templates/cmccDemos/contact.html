@@ -52,57 +52,31 @@
     <!-- <a class="py-2" href="#" aria-label="Product">
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mx-auto" role="img" viewBox="0 0 24 24" focusable="false"><title>Product</title><circle cx="12" cy="12" r="10"/><path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"/></svg>
     </a> -->
-
+    
         <a class="py-2 d-none d-md-inline-block display-4 font-weight-bold">CMCC</a>
         <a class="py-2 d-none d-md-inline-block" href="{% url 'home' %}">About</a>
         <a class="py-2 d-none d-md-inline-block" href="{% url 'products' %}">Products</a>
         <a class="py-2 d-none d-md-inline-block" href="{% url 'blog' %}">Blog</a>
         <a class="py-2 d-none d-md-inline-block" href="{% url 'contact' %}">Contact</a>
-
       </div>
     </nav>
 
     <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-left bg-light">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-1"></div>
-            <div class="col-md-6">
-              <h1 class="display-5 font-weight-normal"> Everything begins with our <strong><u>patients</u></strong>. </h1>
-              <br> 
-                <p class="lead font-weight-normal">Case Management Care Coordination aims to brainstorm ideas, come up with innovative products to make patient's life a better place. We care deeply for patients, everything our patients struggle with, we come up with a better solution. Our products includes: </p>
-                <ul>
-                  <li>Direct assistance for patients with variety of needs</li>
-                  <li>Connect patients with people who care</li>
-                  <li>Better assist Case Management staff</li>
-                  <li>Data Quality Improvement products</li>
-                  <li>Other limitless products</li>
-                </ul>
-                <br>
-               
-            </div>
-              <div class="col-md-5"> 
-                <img src="{% static 'demo1.jpg' %}" height=500></img>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-1"></div>
+              <div class="col-md-6">
+                <a href="mailto: nancyruya@gmail.com" class="btn btn-outline-secondary" href="#">Email Me</a>
+                  </div>
+                  <div class="col-md-5">                    
+                  </div>
               </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-<!--
-<div class="d-md md-equal w-100 my-md-3 pl-md-3">
-	{% for cmccDemo in cmccDemos.all %}
 
-  <div class="bg-dark mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
-    <div class="my-3 py-3">
-      <p class="lead">{{ cmccDemo.summary }}</p>
-    </div>
-    <div class="bg-light shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
-    	<img src="{{ cmccDemo.image.url }}" alt="my image">
-      <p><a href="#" class="text-light bg-dark"></a></p>
-      <p><a href="#" class="text-dark">{{ cmccDemo.new_field }}</a></p>
-    </div>
-  </div>
-{% endfor %}
--->
+    
+
 
 <script src="{% static 'jquery-3.4.1.min.js' %}" ></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>

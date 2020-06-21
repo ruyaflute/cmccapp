@@ -9,6 +9,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', cmccDemos.views.homepage, name ='home'),
     path('blog/', cmccDemos.views.blog, name='blog'),
+    path('contact/', cmccDemos.views.contact, name='contact'),
+    path('products/', cmccDemos.views.products, name='products'),
 ]
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

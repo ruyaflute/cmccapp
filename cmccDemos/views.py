@@ -9,3 +9,11 @@ def homepage(request):
 def blog(request):
 	cmccDemos = CmccDemo.objects
 	return render(request, 'cmccDemos/blog.html', {'cmccDemos': cmccDemos})
+
+def contact(request):
+	cmccDemos = CmccDemo.objects
+	return render(request, 'cmccDemos/contact.html', {'cmccDemos': cmccDemos})
+
+def products(request):
+	cmccDemos = CmccDemo.objects
+	return render(request, 'cmccDemos/products.html', {'cmccDemos': cmccDemos})
