@@ -7,8 +7,8 @@ class CmccDemo(models.Model):
 	#summary
 	summary = models.CharField(max_length=200)
 	#description
-	new_field = models.CharField(max_length=5000, default='SOME STRING')
+	new_field = models.CharField(max_length=200, default='Subtopic')
 
+	blog_content = models.TextField()
 
-	def __str__(self):
-		return self.summary
+	create_date = models.DateTimeField()

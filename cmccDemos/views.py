@@ -17,3 +17,7 @@ def contact(request):
 def products(request):
 	cmccDemos = CmccDemo.objects
 	return render(request, 'cmccDemos/products.html', {'cmccDemos': cmccDemos})
+
+def detail(request, cmccDemo_id):
+	cmccDemo_detail = get_object_or_404(CmccDemo, pk=cmccDemo_id)
+	return render(request, 'cmccDemos/detail.html', {'cmccDemo': cmccDemo_detail})
