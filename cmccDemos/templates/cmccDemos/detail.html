@@ -1,2 +1,21 @@
-{{ cmccDemo.summary }}
+{% extends "./base.html" %}
+{% load static %}
+{% block body_block %}
+<div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-left bg-light">
+  <div class="row no-gutters">
+    <div class="col-md-4">
+      <img src="{{ cmccDemo.image.url }}" class="card-img" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title"> <class="text-dark">{{ cmccDemo.summary }}</a></h5>
+        <p class="card-text">{{ cmccDemo.new_field }}</p>
+        <p class="card-text"><small class="text-muted">{{cmccDemo.blog_content}}</small></p>
+        <p class="card-text"><small class="text-muted">{{cmccDemo.create_date}}</small></p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
 
+{% endblock %}

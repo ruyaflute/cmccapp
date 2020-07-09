@@ -12,3 +12,6 @@ class CmccDemo(models.Model):
 	blog_content = models.TextField()
 
 	create_date = models.DateTimeField()
+
+	def __str__(self):
+		return self.summary

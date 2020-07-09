@@ -11,7 +11,7 @@ urlpatterns = [
     path('blog/', cmccDemos.views.blog, name='blog'),
     path('contact/', cmccDemos.views.contact, name='contact'),
     path('products/', cmccDemos.views.products, name='products'),
-    path('detail/', cmccDemos.views.detail, name='detail'),
+    path('detail/<int:id>/', cmccDemos.views.detail, name='detail'),
 ]
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
